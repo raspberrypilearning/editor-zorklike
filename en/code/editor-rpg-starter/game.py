@@ -1,4 +1,16 @@
 # Runs the text adventure game loop.
+import random
+
+
+def random_phrase(adjectives, nouns):
+    return random.choice(adjectives) + ' ' + random.choice(nouns)
+
+
+def unique_phrases(count, adjectives, nouns):
+    phrases = set()
+    while len(phrases) < count:
+        phrases.add(random_phrase(adjectives, nouns))
+    return list(phrases)
 
 def show_instructions(goal_room, required_items):
     print('''

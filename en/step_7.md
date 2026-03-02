@@ -23,6 +23,6 @@ if 'item' in rooms[current_room] and rooms[current_room]['item'] == monster_name
 
 Click **Run** and move into the monster room.
 
-**Stable point:** The game ends with a monster message.
+The game ends with a monster message.
 
 --- /task ---

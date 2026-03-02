@@ -45,6 +45,6 @@ nouns = [
 
 Click **Run**.
 
-**Stable point:** Your own words appear in the game output.
+Your own words appear in the game output.
 
 --- /task ---

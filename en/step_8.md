@@ -48,6 +48,6 @@ if current_room == goal_room and all(item in inventory for item in required_item
 
 Click **Run** and win one full game.
 
-**Stable point:** You can finish the game only after collecting both random items.
+You can finish the game only after collecting both random items.
 
 --- /task ---

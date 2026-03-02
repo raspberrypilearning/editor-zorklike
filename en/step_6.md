@@ -27,6 +27,6 @@ elif command == 'get':
 
 Click **Run**, type `get` followed by the exact item name shown.
 
-**Stable point:** The item is added to inventory and removed from the room.
+The item is added to inventory and removed from the room.
 
 --- /task ---

@@ -17,6 +17,6 @@ Ideas:
 
 For each change, test immediately after you code it.
 
-**Stable point:** You can explain exactly what changed and show it working in one run.
+You can explain exactly what changed and show it working in one run.
 
 --- /task ---

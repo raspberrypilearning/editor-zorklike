@@ -39,6 +39,6 @@ rooms = {
 
 Click **Run** and try moving around using `go south`, `go east`, and `go west`.
 
-**Stable point:** Navigation works with the new random room names.
+Navigation works with the new random room names.
 
 --- /task ---

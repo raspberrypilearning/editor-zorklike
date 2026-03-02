@@ -17,7 +17,7 @@ Click **Run** in the editor below.
 + Click **Stop** then **Run** again.
 + You should see a different adventure setup.
 
-**Stable point:** You can clearly see that the game changes between runs.
+You can clearly see that the game changes between runs.
 
 --- /task ---
 
