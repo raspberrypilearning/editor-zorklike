@@ -1,16 +1,4 @@
 # Runs the text adventure game loop.
-import random
-
-
-def random_phrase(adjectives, nouns):
-    return random.choice(adjectives) + ' ' + random.choice(nouns)
-
-
-def unique_phrases(count, adjectives, nouns):
-    phrases = set()
-    while len(phrases) < count:
-        phrases.add(random_phrase(adjectives, nouns))
-    return list(phrases)
 
 def show_instructions(goal_room, required_items):
     print('''
@@ -34,15 +22,25 @@ def show_status(current_room, inventory, rooms):
     print('---------------------------')
 
 
-def run_game(current_room, inventory, rooms, goal_room, required_items, monster_name):
+def run_game(current_room, inventory, rooms, goal_room, required_items, monster_name, scripted_moves=None):
     show_instructions(goal_room, required_items)
+
+    move_index = 0
 
     while True:
         show_status(current_room, inventory, rooms)
 
-        move = ''
-        while move == '':
-            move = input('>').strip().lower()
+        if scripted_moves is not None:
+            if move_index >= len(scripted_moves):
+                print('Scripted test finished.')
+                break
+            move = scripted_moves[move_index].strip().lower()
+            move_index += 1
+            print('> ' + move)
+        else:
+            move = ''
+            while move == '':
+                move = input('>').strip().lower()
 
         parts = move.split()
         if len(parts) < 2:

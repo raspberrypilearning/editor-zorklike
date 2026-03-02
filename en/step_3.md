@@ -1,7 +1,9 @@
-<h2 class="c-project-heading--task">Pick random two-word names</h2>
+<h2 class="c-project-heading--task">Add a random phrase function</h2>
 --- task ---
 
-In `game.py`, add a helper function that returns a random adjective + noun phrase.
+In `main.py`, add `import random` on the highlighted line.
+
+Then add the `random_phrase()` function on the highlighted lines.
 
 --- /task ---
 
@@ -9,36 +11,22 @@ In `game.py`, add a helper function that returns a random adjective + noun phras
 --- code ---
 ---
 language: python
-filename: game.py
+filename: main.py
 line_numbers: true
-line_highlights: 1, 4-5
+line_highlights: 1, 20-21
 ---
 import random
+from game import run_game
 
 
-def random_phrase(adjectives, nouns):
+def random_phrase():
     return random.choice(adjectives) + ' ' + random.choice(nouns)
 --- /code ---
 </div>
 
 --- task ---
 
-To test, temporarily import and print one phrase in `main.py`:
-
-<div class="c-project-code">
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_highlights: 1, 4
----
-from game import run_game, random_phrase
-from word_lists import adjectives, nouns
-
-print(random_phrase(adjectives, nouns))
---- /code ---
-</div>
+Add `print(random_phrase())` as a temporary line under your function to test.
 
 Click **Run** a few times.
 

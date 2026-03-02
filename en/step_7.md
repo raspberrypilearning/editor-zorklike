@@ -1,7 +1,7 @@
-<h2 class="c-project-heading--task">Add a random monster loss condition</h2>
+<h2 class="c-project-heading--task">Add a random monster room</h2>
 --- task ---
 
-Use `monster_name` so the player loses if they enter the monster room.
+In `main.py`, in the highlighted `monster_room` block, add the `'item': monster_name` line.
 
 --- /task ---
 
@@ -9,20 +9,37 @@ Use `monster_name` so the player loses if they enter the monster room.
 --- code ---
 ---
 language: python
-filename: game.py
+filename: main.py
 line_numbers: true
-line_highlights: 56-58
+line_highlights: 50
 ---
-if 'item' in rooms[current_room] and rooms[current_room]['item'] == monster_name:
-    print('The ' + monster_name + ' catches you... GAME OVER!')
-    break
+monster_room: {
+    'north': start_room,
+    'item': monster_name,
+},
 --- /code ---
 </div>
 
 --- task ---
 
-Click **Run** and move into the monster room.
+To test this with code only, temporarily replace your `scripted_moves` list with:
 
-The game ends with a monster message.
+<div class="c-project-code">
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_highlights: 55-57
+---
+scripted_moves = [
+    'go south',
+]
+--- /code ---
+</div>
+
+Click **Run** and you should see the game-over monster message.
+
+After testing, put your longer `scripted_moves` list back for Step 8.
 
 --- /task ---

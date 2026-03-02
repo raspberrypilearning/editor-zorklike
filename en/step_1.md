@@ -14,6 +14,7 @@ The game will use random adjective + noun combinations from lists that you contr
 Click **Run** in the editor below.
 
 + Notice that room names and item names are made from two words.
++ The game runs commands from code automatically, so you do not need to type into a shell.
 + Click **Stop** then **Run** again.
 + You should see a different adventure setup.
 

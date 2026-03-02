@@ -1,32 +1,33 @@
 <h2 class="c-project-heading--task">Create your word banks</h2>
 --- task ---
 
-Open `word_lists.py` and edit the two lists:
+In `main.py`, replace the highlighted list lines with your own words:
 
 + `adjectives`
 + `nouns`
 
-Add at least 5 words to each list.
+Use at least 5 words in each list.
 
 --- /task ---
 
 --- task ---
 
-Example:
+Replace the highlighted lines with:
 
 <div class="c-project-code">
 --- code ---
 ---
 language: python
-filename: word_lists.py
+filename: main.py
 line_numbers: true
+line_highlights: 4-17
 ---
 adjectives = [
     'ancient',
     'frozen',
     'golden',
     'silent',
-    'wild'
+    'wild',
 ]
 
 nouns = [
@@ -34,7 +35,7 @@ nouns = [
     'amulet',
     'guardian',
     'lantern',
-    'gate'
+    'gate',
 ]
 --- /code ---
 </div>
@@ -45,6 +46,6 @@ nouns = [
 
 Click **Run**.
 
-Your own words appear in the game output.
+The game still runs, and your new words are ready to use in later steps.
 
 --- /task ---

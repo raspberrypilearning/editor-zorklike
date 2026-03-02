@@ -7,13 +7,13 @@ Improve your random adventure.
 
 --- task ---
 
-Ideas:
+Ideas (all in `main.py`):
 
 + Add 10+ adjectives and 10+ nouns for more variety.
 + Add one extra room to the map.
 + Add one extra required item.
-+ Add a new command, for example `look` to repeat room information.
-+ Change the story text in `show_instructions()`.
++ Add a second monster room.
++ Change the story theme by renaming room and item variable names.
 
 For each change, test immediately after you code it.
 

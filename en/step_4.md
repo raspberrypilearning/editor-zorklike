@@ -1,7 +1,7 @@
-<h2 class="c-project-heading--task">Generate unique names for one adventure</h2>
+<h2 class="c-project-heading--task">Generate random names for one game</h2>
 --- task ---
 
-In `game.py`, add a second helper to build a list of unique random phrases.
+In `main.py`, add this helper function on the highlighted lines.
 
 --- /task ---
 
@@ -9,21 +9,21 @@ In `game.py`, add a second helper to build a list of unique random phrases.
 --- code ---
 ---
 language: python
-filename: game.py
+filename: main.py
 line_numbers: true
-line_highlights: 8-12
+line_highlights: 24-28
 ---
-def unique_phrases(count, adjectives, nouns):
+def unique_phrases(count):
     phrases = set()
     while len(phrases) < count:
-        phrases.add(random_phrase(adjectives, nouns))
+        phrases.add(random_phrase())
     return list(phrases)
 --- /code ---
 </div>
 
 --- task ---
 
-In `main.py`, call that function:
+Now replace the fixed room and item name lines with this generated-name block:
 
 <div class="c-project-code">
 --- code ---
@@ -31,16 +31,18 @@ In `main.py`, call that function:
 language: python
 filename: main.py
 line_numbers: true
-line_highlights: 1, 7
+line_highlights: 31-40
 ---
-from game import run_game, unique_phrases
-from word_lists import adjectives, nouns
-
-names = unique_phrases(7, adjectives, nouns)
+names = unique_phrases(7)
+start_room = names[0].title()
+monster_room = names[1].title()
+treasure_room = names[2].title()
+goal_room = names[3].title()
+item_one = names[4]
+item_two = names[5]
+monster_name = names[6]
 --- /code ---
 </div>
-
-Continue assigning names to rooms and items.
 
 Click **Run**.
 

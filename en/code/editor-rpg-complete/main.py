@@ -1,8 +1,46 @@
-from game import run_game, unique_phrases
-from word_lists import adjectives, nouns
+import random
+
+from game import run_game
+
+adjectives = [
+    'ancient',
+    'brave',
+    'crystal',
+    'dusty',
+    'ember',
+    'frozen',
+    'golden',
+    'hidden',
+]
+
+nouns = [
+    'archive',
+    'amulet',
+    'beast',
+    'citadel',
+    'compass',
+    'forest',
+    'gate',
+    'guardian',
+    'lantern',
+    'path',
+    'temple',
+    'vault',
+]
 
 
-names = unique_phrases(7, adjectives, nouns)
+def random_phrase():
+    return random.choice(adjectives) + ' ' + random.choice(nouns)
+
+
+def unique_phrases(count):
+    phrases = set()
+    while len(phrases) < count:
+        phrases.add(random_phrase())
+    return list(phrases)
+
+
+names = unique_phrases(7)
 start_room = names[0].title()
 monster_room = names[1].title()
 treasure_room = names[2].title()
@@ -35,6 +73,15 @@ inventory = []
 current_room = start_room
 required_items = [item_one, item_two]
 
+scripted_moves = [
+    'go east',
+    f'get {item_two}',
+    'go west',
+    f'get {item_one}',
+    'go east',
+    'go south',
+]
+
 current_room, inventory = run_game(
     current_room,
     inventory,
@@ -42,4 +89,5 @@ current_room, inventory = run_game(
     goal_room,
     required_items,
     monster_name,
+    scripted_moves,
 )
