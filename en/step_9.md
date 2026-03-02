@@ -1,22 +1,45 @@
 <h2 class="c-project-heading--task">Challenge</h2>
 --- task ---
-
-Improve your random adventure.
-
+Extend your game by changing words and map rules to create your own themed adventure.
 --- /task ---
 
+<div class="c-project-code">
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 4
+line_highlights: 4-10,12-18,20-26
+---
+adjectives = [
+    'space',
+    'neon',
+    'icy',
+    'shadow',
+    'cosmic',
+]
+
+room_nouns = [
+    'station',
+    'bridge',
+    'airlock',
+    'hangar',
+    'lab',
+]
+
+object_nouns = [
+    'keycard',
+    'helmet',
+    'crystal',
+    'drone',
+    'battery',
+]
+--- /code ---
+</div>
+
 --- task ---
+**Test:** Click **Run**.
 
-Ideas (all in `main.py`):
-
-+ Add 10+ adjectives and 10+ nouns for more variety.
-+ Add one extra room to the map.
-+ Add one extra required item.
-+ Add a second monster room.
-+ Change the story theme by renaming room and item variable names.
-
-For each change, test immediately after you code it.
-
-You can explain exactly what changed and show it working in one run.
-
+You can describe how your new theme changed room and object names in the output.
 --- /task ---

@@ -1,46 +1,46 @@
 from game import run_game
 
-# Step 2: edit these word lists.
+# Step 2: edit these lists to match your story theme.
 adjectives = [
-    'ancient',
-    'frozen',
+    'chocolate',
     'golden',
-    'silent',
-    'wild',
+    'fizzy',
+    'sweet',
+    'candy',
 ]
 
-nouns = [
-    'forest',
-    'amulet',
-    'guardian',
-    'lantern',
-    'gate',
+room_nouns = [
+    'factory',
+    'river',
+    'elevator',
+    'tunnel',
+    'inventing room',
+]
+
+object_nouns = [
+    'ticket',
+    'gobstopper',
+    'bar',
+    'blueberry',
+    'oompa loompa',
 ]
 
 # Step 3 and 4 will replace these fixed names with random names.
-start_room = 'Hall'
-monster_room = 'Kitchen'
-treasure_room = 'Dining Room'
-goal_room = 'Garden'
-item_one = 'key'
-item_two = 'potion'
-monster_name = 'monster'
+start_room = 'Chocolate Hall'
+monster_room = 'Fizzy Tunnel'
+treasure_room = 'Golden Inventing Room'
+goal_room = 'Candy Elevator'
+item_one = 'golden ticket'
+item_two = 'everlasting gobstopper'
+monster_name = 'giant blueberry'
 
-# Step 5 builds the map layout.
+# Step 5 builds this map into four connected rooms.
 rooms = {
     start_room: {
         'south': monster_room,
-        'east': treasure_room,
     },
     monster_room: {
         'north': start_room,
-    },
-    treasure_room: {
-        'west': start_room,
-        'south': goal_room,
-    },
-    goal_room: {
-        'north': treasure_room,
     },
 }
 
@@ -53,12 +53,8 @@ required_items = []
 
 # Learners test by editing these commands in code, not by typing in a shell.
 scripted_moves = [
-    'go east',
-    f'get {item_two}',
-    'go west',
-    f'get {item_one}',
-    'go east',
     'go south',
+    'go north',
 ]
 
 current_room, inventory = run_game(

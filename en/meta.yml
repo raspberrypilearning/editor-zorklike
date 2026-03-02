@@ -17,18 +17,19 @@ software: python
 version: 3
 last_tested: 2026-03-02
 steps:
-- title: Step 1
-- title: Step 2
+- title: You will make
+- title: Create Your Word Banks
   completion:
   - engaged
-- title: Step 3
-- title: Step 4
-- title: Step 5
-- title: Step 6
-- title: Step 7
-- title: Step 8
+- title: Add One Random Name Function
+- title: Generate Random Room And Object Names
+- title: Build A Four-Room Map
+- title: Add Items To Collect
+- title: Add The Monster Room
   completion:
   - internal
+- title: Set The Win Condition
+  completion:
   - external
-- title: Step 9
+- title: Challenge
   challenge: true

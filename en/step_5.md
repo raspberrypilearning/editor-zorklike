@@ -1,8 +1,6 @@
-<h2 class="c-project-heading--task">Build the map layout</h2>
+<h2 class="c-project-heading--task">Build A Four-Room Map</h2>
 --- task ---
-
-In `main.py`, replace the highlighted `rooms` block with this map layout.
-
+Replace the `rooms` dictionary so the player can travel across four linked rooms.
 --- /task ---
 
 <div class="c-project-code">
@@ -11,8 +9,10 @@ In `main.py`, replace the highlighted `rooms` block with this map layout.
 language: python
 filename: main.py
 line_numbers: true
-line_highlights: 42-56
+line_number_start: 37
+line_highlights: 40,41,44,47,48,51
 ---
+# Step 5 builds this map into four connected rooms.
 rooms = {
     start_room: {
         'south': monster_room,  # Path to the monster room.
@@ -33,11 +33,7 @@ rooms = {
 </div>
 
 --- task ---
+**Test:** Click **Run**.
 
-Click **Run**.
-
-Look for scripted command lines in the output such as `> go east`, `> go west`, and `> go south`.
-
-You can move through all connected rooms without code errors.
-
+The scripted movement output shows travel through more than two rooms.
 --- /task ---

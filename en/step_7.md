@@ -1,8 +1,6 @@
-<h2 class="c-project-heading--task">Add a random monster room</h2>
+<h2 class="c-project-heading--task">Add The Monster Room</h2>
 --- task ---
-
-In `main.py`, in the highlighted `monster_room` block, add the `'item': monster_name` line.
-
+Add the monster item to `monster_room` and set a short scripted test path into that room.
 --- /task ---
 
 <div class="c-project-code">
@@ -11,35 +9,22 @@ In `main.py`, in the highlighted `monster_room` block, add the `'item': monster_
 language: python
 filename: main.py
 line_numbers: true
-line_highlights: 50
+line_number_start: 42
+line_highlights: 44,47-49
 ---
-monster_room: {
-    'north': start_room,
-    'item': monster_name,  # Entering this room now causes game over.
-},
---- /code ---
-</div>
+    monster_room: {
+        'north': start_room,
+        'item': monster_name,  # Entering this room now causes game over.
+    },
 
---- task ---
-
-To test this with code only, temporarily replace your `scripted_moves` list with:
-
-<div class="c-project-code">
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_highlights: 55-57
----
 scripted_moves = [
     'go south',
 ]
 --- /code ---
 </div>
 
-Click **Run** and you should see the game-over monster message.
+--- task ---
+**Test:** Click **Run**.
 
-After testing, put your longer `scripted_moves` list back for Step 8.
-
+The output ends with the monster game-over message.
 --- /task ---

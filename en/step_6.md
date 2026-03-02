@@ -1,13 +1,6 @@
-<h2 class="c-project-heading--task">Add random items to collect</h2>
+<h2 class="c-project-heading--task">Add Items To Collect</h2>
 --- task ---
-
-In `main.py`, add the two `'item'` lines in the highlighted places inside the existing `rooms` block:
-
-+ `item_one` in the start room
-+ `item_two` in the treasure room
-
-Do not replace the whole dictionary. Add only the two highlighted `'item'` lines.
-
+Add two random items to the map and update the scripted moves to collect them.
 --- /task ---
 
 <div class="c-project-code">
@@ -16,7 +9,8 @@ Do not replace the whole dictionary. Add only the two highlighted `'item'` lines
 language: python
 filename: main.py
 line_numbers: true
-line_highlights: 46, 53
+line_number_start: 38
+line_highlights: 42,50,56-60
 ---
 rooms = {
     start_room: {
@@ -36,15 +30,18 @@ rooms = {
         'north': treasure_room,
     },
 }
+
+scripted_moves = [
+    'go east',
+    f'get {item_two}',
+    'go west',
+    f'get {item_one}',
+]
 --- /code ---
 </div>
 
 --- task ---
+**Test:** Click **Run**.
 
-Click **Run**.
-
-Look for scripted `get` lines in the output, for example `> get ...`.
-
-The item is added to inventory and removed from the room.
-
+The output shows both `get` commands and both items being added to the inventory.
 --- /task ---

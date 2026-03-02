@@ -1,8 +1,6 @@
-<h2 class="c-project-heading--task">Generate random names for one game</h2>
+<h2 class="c-project-heading--task">Generate Random Room And Object Names</h2>
 --- task ---
-
-In `main.py`, add this helper function on the highlighted lines.
-
+Replace the fixed names with generated room names and generated object names.
 --- /task ---
 
 <div class="c-project-code">
@@ -11,41 +9,29 @@ In `main.py`, add this helper function on the highlighted lines.
 language: python
 filename: main.py
 line_numbers: true
-line_highlights: 24-28
+line_number_start: 24
+line_highlights: 24-28,30-38
 ---
-def unique_phrases(count):
+def unique_phrases(count, noun_list):
     phrases = set()  # A set keeps names unique.
     while len(phrases) < count:
-        phrases.add(random_phrase())  # Add random names until we have enough.
+        phrases.add(random_phrase(noun_list))  # Add random names until we have enough.
     return list(phrases)  # Convert back to a list for indexing.
+
+room_names = unique_phrases(4, room_nouns)  # Create 4 unique room names.
+object_names = unique_phrases(3, object_nouns)  # Create 3 unique object names.
+start_room = room_names[0].title()  # Room where the player starts.
+monster_room = room_names[1].title()  # Dangerous room.
+treasure_room = room_names[2].title()  # Room with the second item.
+goal_room = room_names[3].title()  # Room needed to win.
+item_one = object_names[0]  # First item to collect.
+item_two = object_names[1]  # Second item to collect.
+monster_name = object_names[2]  # Random monster name.
 --- /code ---
 </div>
 
 --- task ---
+**Test:** Click **Run** two times.
 
-Now replace the fixed room and item name lines with this generated-name block:
-
-<div class="c-project-code">
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_highlights: 31-40
----
-names = unique_phrases(7)  # Create 7 unique random names.
-start_room = names[0].title()  # Room where the player starts.
-monster_room = names[1].title()  # Dangerous room.
-treasure_room = names[2].title()  # Room with the second item.
-goal_room = names[3].title()  # Room needed to win.
-item_one = names[4]  # First item to collect.
-item_two = names[5]  # Second item to collect.
-monster_name = names[6]  # Random monster name.
---- /code ---
-</div>
-
-Click **Run**.
-
-The room and item variables are always filled, and they change each run.
-
+The room and object names are different on each run.
 --- /task ---

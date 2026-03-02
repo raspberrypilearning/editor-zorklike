@@ -1,10 +1,6 @@
-<h2 class="c-project-heading--task">Add a random phrase function</h2>
+<h2 class="c-project-heading--task">Add One Random Name Function</h2>
 --- task ---
-
-In `main.py`, add `import random` on the highlighted line.
-
-Then add the `random_phrase()` function on the highlighted lines.
-
+Add random word code so one adjective+noun name can be generated.
 --- /task ---
 
 <div class="c-project-code">
@@ -13,23 +9,45 @@ Then add the `random_phrase()` function on the highlighted lines.
 language: python
 filename: main.py
 line_numbers: true
-line_highlights: 1, 20-21
+line_number_start: 1
+line_highlights: 1,29-30
 ---
-import random  # Lets us pick random words from lists.
-from game import run_game  # Runs the helper game loop.
+import random
+from game import run_game
+
+# Step 2: edit these lists to match your story theme.
+adjectives = [
+    'chocolate',
+    'golden',
+    'fizzy',
+    'sweet',
+    'candy',
+]
+
+room_nouns = [
+    'factory',
+    'river',
+    'elevator',
+    'tunnel',
+    'inventing room',
+]
+
+object_nouns = [
+    'ticket',
+    'gobstopper',
+    'bar',
+    'blueberry',
+    'oompa loompa',
+]
 
 
-def random_phrase():
-    return random.choice(adjectives) + ' ' + random.choice(nouns)  # Build one two-word name.
+def random_phrase(noun_list):
+    return random.choice(adjectives) + ' ' + random.choice(noun_list)
 --- /code ---
 </div>
 
 --- task ---
+**Test:** Add `print(random_phrase(room_nouns))` under the function and click **Run**.
 
-Add `print(random_phrase())` as a temporary line under your function to test.
-
-Click **Run** a few times.
-
-You see a different two-word phrase between runs.
-
+You see a random two-word room-style name in the output.
 --- /task ---

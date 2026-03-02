@@ -3,40 +3,47 @@
 import random
 
 adjectives = [
-    'ancient',
-    'brave',
-    'crystal',
-    'dusty',
-    'ember',
-    'frozen',
+    'chocolate',
     'golden',
-    'hidden',
+    'fizzy',
+    'sweet',
+    'candy',
+    'wonka',
+    'sugary',
+    'mystery',
 ]
 
-nouns = [
-    'archive',
-    'amulet',
-    'beast',
-    'citadel',
-    'compass',
-    'forest',
-    'gate',
-    'guardian',
-    'lantern',
-    'path',
-    'temple',
-    'vault',
+room_nouns = [
+    'factory',
+    'river',
+    'elevator',
+    'tunnel',
+    'inventing room',
+    'nut room',
+    'tv room',
+    'workshop',
+]
+
+object_nouns = [
+    'ticket',
+    'gobstopper',
+    'bar',
+    'blueberry',
+    'oompa loompa',
+    'toffee',
+    'fudge',
+    'caramel',
 ]
 
 
-def random_phrase():
-    return random.choice(adjectives) + ' ' + random.choice(nouns)
+def random_phrase(noun_list):
+    return random.choice(adjectives) + ' ' + random.choice(noun_list)
 
 
-def unique_phrases(count):
+def unique_phrases(count, noun_list):
     phrases = set()
     while len(phrases) < count:
-        phrases.add(random_phrase())
+        phrases.add(random_phrase(noun_list))
     return list(phrases)
 
 
@@ -62,14 +69,15 @@ def show_status(current_room, inventory, rooms):
     print('---------------------------')
 
 
-names = unique_phrases(7)
-start_room = names[0].title()
-monster_room = names[1].title()
-treasure_room = names[2].title()
-goal_room = names[3].title()
-item_one = names[4]
-item_two = names[5]
-monster_name = names[6]
+room_names = unique_phrases(4, room_nouns)
+object_names = unique_phrases(3, object_nouns)
+start_room = room_names[0].title()
+monster_room = room_names[1].title()
+treasure_room = room_names[2].title()
+goal_room = room_names[3].title()
+item_one = object_names[0]
+item_two = object_names[1]
+monster_name = object_names[2]
 
 rooms = {
     start_room: {
@@ -94,15 +102,21 @@ rooms = {
 inventory = []
 current_room = start_room
 required_items = [item_one, item_two]
+scripted_moves = [
+    'go east',
+    f'get {item_two}',
+    'go west',
+    f'get {item_one}',
+    'go east',
+    'go south',
+]
 
 show_instructions(goal_room, required_items)
 
-while True:
+for move in scripted_moves:
     show_status(current_room, inventory, rooms)
-
-    move = ''
-    while move == '':
-        move = input('>').strip().lower()
+    move = move.strip().lower()
+    print('> ' + move)
 
     parts = move.split()
     if len(parts) < 2:
@@ -135,3 +149,5 @@ while True:
     if current_room == goal_room and all(item in inventory for item in required_items):
         print('You completed the quest... YOU WIN!')
         break
+else:
+    print('Scripted test finished.')
