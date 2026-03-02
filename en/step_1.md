@@ -1,45 +1,26 @@
-## What you will make
-OR
-## What you will do - change meta if you use this
+<h2 class="c-project-heading--task">What you will make</h2>
+--- task ---
 
-A brief description - one or two sentences. 
+Build a text adventure that creates a new quest every time you run it.
 
---- print-only ---
+The game will use random adjective + noun combinations from lists that you control.
 
-![ALT TEXT](images/IMAGE.png)
+--- /task ---
 
---- /print-only ---
+<h2 class="c-project-heading--explainer">Try it out</h2>
 
---- no-print ---
+--- task ---
 
-[Editor embed](https://editor.raspberrypi.org/en/embed/viewer/project-slug)
+Click **Run** in the editor below.
 
---- /no-print ---
++ Notice that room names and item names are made from two words.
++ Click **Stop** then **Run** again.
++ You should see a different adventure setup.
 
---- no-print ---
+**Stable point:** You can clearly see that the game changes between runs.
 
-Video embed
+--- /task ---
 
-<video width="640" height="360" controls>
-<source src="images/videoname.mp4" type="video/mp4">
-</video>
-
-Youtube embed 
-<html>
-<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
-<iframe style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/XXXXXXXXX?rel=0&cc_load_policy=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-</iframe>
-</div><br>
-</html>
-
-Scratch embed
-<div class="scratch-preview">
- <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/XXXXXXXXX/?autostart=false" frameborder="0"></iframe>
+<div class="c-project-output">
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/editor-rpg-complete" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 </div>
-
---- /no-print ---
-
-### You will need:
-- a
-- b
-- c
