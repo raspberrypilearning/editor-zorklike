@@ -28,7 +28,7 @@ adjectives = [
     'golden',
     'silent',
     'wild',
-]
+]  # Describing words for random names.
 
 nouns = [
     'forest',
@@ -36,7 +36,7 @@ nouns = [
     'guardian',
     'lantern',
     'gate',
-]
+]  # Object/place words for random names.
 --- /code ---
 </div>
 

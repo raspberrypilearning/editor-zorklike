@@ -15,7 +15,7 @@ line_highlights: 50
 ---
 monster_room: {
     'north': start_room,
-    'item': monster_name,
+    'item': monster_name,  # Entering this room now causes game over.
 },
 --- /code ---
 </div>

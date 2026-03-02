@@ -15,12 +15,12 @@ filename: main.py
 line_numbers: true
 line_highlights: 1, 20-21
 ---
-import random
-from game import run_game
+import random  # Lets us pick random words from lists.
+from game import run_game  # Runs the helper game loop.
 
 
 def random_phrase():
-    return random.choice(adjectives) + ' ' + random.choice(nouns)
+    return random.choice(adjectives) + ' ' + random.choice(nouns)  # Build one two-word name.
 --- /code ---
 </div>
 

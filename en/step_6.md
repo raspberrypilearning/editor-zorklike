@@ -22,7 +22,7 @@ rooms = {
     start_room: {
         'south': monster_room,
         'east': treasure_room,
-        'item': item_one,
+        'item': item_one,  # First item appears in the start room.
     },
     monster_room: {
         'north': start_room,
@@ -30,7 +30,7 @@ rooms = {
     treasure_room: {
         'west': start_room,
         'south': goal_room,
-        'item': item_two,
+        'item': item_two,  # Second item appears in the treasure room.
     },
     goal_room: {
         'north': treasure_room,

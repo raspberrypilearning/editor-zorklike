@@ -14,10 +14,10 @@ line_numbers: true
 line_highlights: 24-28
 ---
 def unique_phrases(count):
-    phrases = set()
+    phrases = set()  # A set keeps names unique.
     while len(phrases) < count:
-        phrases.add(random_phrase())
-    return list(phrases)
+        phrases.add(random_phrase())  # Add random names until we have enough.
+    return list(phrases)  # Convert back to a list for indexing.
 --- /code ---
 </div>
 
@@ -33,14 +33,14 @@ filename: main.py
 line_numbers: true
 line_highlights: 31-40
 ---
-names = unique_phrases(7)
-start_room = names[0].title()
-monster_room = names[1].title()
-treasure_room = names[2].title()
-goal_room = names[3].title()
-item_one = names[4]
-item_two = names[5]
-monster_name = names[6]
+names = unique_phrases(7)  # Create 7 unique random names.
+start_room = names[0].title()  # Room where the player starts.
+monster_room = names[1].title()  # Dangerous room.
+treasure_room = names[2].title()  # Room with the second item.
+goal_room = names[3].title()  # Room needed to win.
+item_one = names[4]  # First item to collect.
+item_two = names[5]  # Second item to collect.
+monster_name = names[6]  # Random monster name.
 --- /code ---
 </div>
 

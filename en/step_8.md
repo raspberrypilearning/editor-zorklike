@@ -13,7 +13,7 @@ filename: main.py
 line_numbers: true
 line_highlights: 52
 ---
-required_items = [item_one, item_two]
+required_items = [item_one, item_two]  # Player must collect both to win.
 --- /code ---
 </div>
 
