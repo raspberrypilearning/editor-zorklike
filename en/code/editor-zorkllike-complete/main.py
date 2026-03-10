@@ -81,15 +81,6 @@ inventory = []
 current_room = start_room
 required_items = [item_one, item_two]
 
-scripted_moves = [
-    'go east',
-    f'get {item_two}',
-    'go west',
-    f'get {item_one}',
-    'go east',
-    'go south',
-]
-
 current_room, inventory = run_game(
     current_room,
     inventory,
@@ -97,5 +88,4 @@ current_room, inventory = run_game(
     goal_room,
     required_items,
     monster_name,
-    scripted_moves,
 )

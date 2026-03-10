@@ -31,4 +31,6 @@ scripted_moves = [
 **Test:** Click **Run**.
 
 The output ends with the win message after both items are collected.
+
+To play by typing your own commands, set `scripted_moves = None` and click **Run** again.
 --- /task ---
