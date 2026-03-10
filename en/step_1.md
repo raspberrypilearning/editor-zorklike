@@ -1,6 +1,6 @@
 <h2 class="c-project-heading--task">You will make</h2>
 --- task ---
-Build a random word adventure where rooms and objects change each time the code runs.
+Build a random word adventure where rooms and objects change each time the code runs!
 --- /task ---
 
 <div class="c-project-output">
