@@ -1,7 +1,6 @@
-<h2 class="c-project-heading--task">Create Your Word Banks</h2>
---- task ---
-Replace the three word lists in `main.py` with your own theme words.
---- /task ---
+<h2 class="c-project-heading--task">Add One Random Name Function</h2>
+### Step 1
+Add random word code so one adjective+noun name can be generated.
 
 <div class="c-project-code">
 --- code ---
@@ -10,8 +9,9 @@ language: python
 filename: main.py
 line_numbers: true
 line_number_start: 1
-line_highlights: 4-10,12-18,20-26
+line_highlights: 1,29-30
 ---
+import random
 from game import run_game
 
 # Step 2: edit these lists to match your story theme.
@@ -38,11 +38,14 @@ object_nouns = [
     'blueberry',
     'oompa loompa',
 ]
+
+
+def random_phrase(noun_list):
+    return random.choice(adjectives) + ' ' + random.choice(noun_list)
 --- /code ---
 </div>
 
---- task ---
-**Test:** Click **Run**.
+### Step 2
+**Test:** Add `print(random_phrase(room_nouns))` under the function and click **Run**.
 
-The game runs and keeps using your new themed words.
---- /task ---
+You see a random two-word room-style name in the output.

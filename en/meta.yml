@@ -16,12 +16,12 @@ hardware: ''
 software: python
 version: 3
 last_tested: 2026-03-02
+landing: true
 steps:
-- title: You will make
 - title: Create Your Word Banks
+- title: Add One Random Name Function
   completion:
   - engaged
-- title: Add One Random Name Function
 - title: Generate Random Room And Object Names
 - title: Build A Four-Room Map
 - title: Add Items To Collect
