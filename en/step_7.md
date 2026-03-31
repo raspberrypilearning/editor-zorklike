@@ -1,7 +1,6 @@
-<h2 class="c-project-heading--task">Add The Monster Room</h2>
---- task ---
-Add the monster item to `monster_room` and set a short scripted test path into that room.
---- /task ---
+<h2 class="c-project-heading--task">Set The Win Condition</h2>
+### Step 1
+Set required items for winning and restore a scripted path that collects both items and reaches the goal room.
 
 <div class="c-project-code">
 --- code ---
@@ -9,22 +8,27 @@ Add the monster item to `monster_room` and set a short scripted test path into t
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 42
-line_highlights: 44,47-49
+line_number_start: 50
+line_highlights: 52,54-60
 ---
-    monster_room: {
-        'north': start_room,
-        'item': monster_name,  # Entering this room now causes game over.
-    },
+inventory = []
+current_room = start_room
+required_items = [item_one, item_two]  # Player must collect both to win.
 
 scripted_moves = [
+    'go east',
+    f'get {item_two}',
+    'go west',
+    f'get {item_one}',
+    'go east',
     'go south',
 ]
 --- /code ---
 </div>
 
---- task ---
+### Step 2
 **Test:** Click **Run**.
 
-The output ends with the monster game-over message.
---- /task ---
+The output ends with the win message after both items are collected.
+
+To play by typing your own commands, set `scripted_moves = None` and click **Run** again.

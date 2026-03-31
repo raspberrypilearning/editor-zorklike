@@ -1,7 +1,6 @@
-<h2 class="c-project-heading--task">Set The Win Condition</h2>
---- task ---
-Set required items for winning and restore a scripted path that collects both items and reaches the goal room.
---- /task ---
+<h2 class="c-project-heading--task">Challenge</h2>
+### Step 1
+Extend your game by changing words and map rules to create your own themed adventure.
 
 <div class="c-project-code">
 --- code ---
@@ -9,28 +8,36 @@ Set required items for winning and restore a scripted path that collects both it
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 50
-line_highlights: 52,54-60
+line_number_start: 4
+line_highlights: 4-10,12-18,20-26
 ---
-inventory = []
-current_room = start_room
-required_items = [item_one, item_two]  # Player must collect both to win.
+adjectives = [
+    'space',
+    'neon',
+    'icy',
+    'shadow',
+    'cosmic',
+]
 
-scripted_moves = [
-    'go east',
-    f'get {item_two}',
-    'go west',
-    f'get {item_one}',
-    'go east',
-    'go south',
+room_nouns = [
+    'station',
+    'bridge',
+    'airlock',
+    'hangar',
+    'lab',
+]
+
+object_nouns = [
+    'keycard',
+    'helmet',
+    'crystal',
+    'drone',
+    'battery',
 ]
 --- /code ---
 </div>
 
---- task ---
+### Step 2
 **Test:** Click **Run**.
 
-The output ends with the win message after both items are collected.
-
-To play by typing your own commands, set `scripted_moves = None` and click **Run** again.
---- /task ---
+You can describe how your new theme changed room and object names in the output.

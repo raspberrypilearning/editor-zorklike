@@ -1,7 +1,6 @@
-<h2 class="c-project-heading--task">Generate Random Room And Object Names</h2>
---- task ---
-Replace the fixed names with generated room names and generated object names.
---- /task ---
+<h2 class="c-project-heading--task">Build A Four-Room Map</h2>
+### Step 1
+Replace the `rooms` dictionary so the player can travel across four linked rooms.
 
 <div class="c-project-code">
 --- code ---
@@ -9,29 +8,30 @@ Replace the fixed names with generated room names and generated object names.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 24
-line_highlights: 24-28,30-38
+line_number_start: 37
+line_highlights: 40,41,44,47,48,51
 ---
-def unique_phrases(count, noun_list):
-    phrases = set()  # A set keeps names unique.
-    while len(phrases) < count:
-        phrases.add(random_phrase(noun_list))  # Add random names until we have enough.
-    return list(phrases)  # Convert back to a list for indexing.
-
-room_names = unique_phrases(4, room_nouns)  # Create 4 unique room names.
-object_names = unique_phrases(3, object_nouns)  # Create 3 unique object names.
-start_room = room_names[0].title()  # Room where the player starts.
-monster_room = room_names[1].title()  # Dangerous room.
-treasure_room = room_names[2].title()  # Room with the second item.
-goal_room = room_names[3].title()  # Room needed to win.
-item_one = object_names[0]  # First item to collect.
-item_two = object_names[1]  # Second item to collect.
-monster_name = object_names[2]  # Random monster name.
+# Step 5 builds this map into four connected rooms.
+rooms = {
+    start_room: {
+        'south': monster_room,  # Path to the monster room.
+        'east': treasure_room,  # Path to the treasure room.
+    },
+    monster_room: {
+        'north': start_room,  # Path back to the start room.
+    },
+    treasure_room: {
+        'west': start_room,  # Path back to the start room.
+        'south': goal_room,  # Path to the goal room.
+    },
+    goal_room: {
+        'north': treasure_room,  # Path back to the treasure room.
+    },
+}
 --- /code ---
 </div>
 
---- task ---
-**Test:** Click **Run** two times.
+### Step 2
+**Test:** Click **Run**.
 
-The room and object names are different on each run.
---- /task ---
+The scripted movement output shows travel through more than two rooms.
