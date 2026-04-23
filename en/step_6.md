@@ -1,6 +1,8 @@
 <h2 class="c-project-heading--task">Add The Monster Room</h2>
-### Step 1
+
 Add the monster item to `monster_room` and set a short scripted test path into that room.
+
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
 
 <div class="c-project-code">
 --- code ---
@@ -22,7 +24,8 @@ scripted_moves = [
 --- /code ---
 </div>
 
-### Step 2
-**Test:** Click **Run**.
+## Now run your code
+
+Click **Run**.
 
 The output ends with the monster game-over message.

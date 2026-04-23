@@ -1,6 +1,8 @@
 <h2 class="c-project-heading--task">Build A Four-Room Map</h2>
-### Step 1
+
 Replace the `rooms` dictionary so the player can travel across four linked rooms.
+
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
 
 <div class="c-project-code">
 --- code ---
@@ -31,7 +33,8 @@ rooms = {
 --- /code ---
 </div>
 
-### Step 2
-**Test:** Click **Run**.
+## Now run your code
+
+Click **Run**.
 
 The scripted movement output shows travel through more than two rooms.

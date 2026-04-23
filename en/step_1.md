@@ -1,6 +1,8 @@
 <h2 class="c-project-heading--task">Create Your Word Banks</h2>
-### Step 1
+
 Replace the three word lists in `main.py` with your own theme words.
+
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
 
 <div class="c-project-code">
 --- code ---
@@ -40,7 +42,8 @@ object_nouns = [
 --- /code ---
 </div>
 
-### Step 2
-**Test:** Click **Run**.
+## Now run your code
+
+Click **Run**.
 
 The game runs and keeps using your new themed words.

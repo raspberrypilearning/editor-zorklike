@@ -1,6 +1,8 @@
 <h2 class="c-project-heading--task">Add One Random Name Function</h2>
-### Step 1
+
 Add random word code so one adjective+noun name can be generated.
+
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
 
 <div class="c-project-code">
 --- code ---
@@ -45,7 +47,8 @@ def random_phrase(noun_list):
 --- /code ---
 </div>
 
-### Step 2
-**Test:** Add `print(random_phrase(room_nouns))` under the function and click **Run**.
+## Now run your code
+
+Add `print(random_phrase(room_nouns))` under the function and click **Run**.
 
 You see a random two-word room-style name in the output.
