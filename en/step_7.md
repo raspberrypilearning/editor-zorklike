@@ -1,6 +1,8 @@
 <h2 class="c-project-heading--task">Set The Win Condition</h2>
-### Step 1
+
 Set required items for winning and restore a scripted path that collects both items and reaches the goal room.
+
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
 
 <div class="c-project-code">
 --- code ---
@@ -26,8 +28,9 @@ scripted_moves = [
 --- /code ---
 </div>
 
-### Step 2
-**Test:** Click **Run**.
+## Now run your code
+
+Click **Run**.
 
 The output ends with the win message after both items are collected.
 

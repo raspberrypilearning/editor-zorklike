@@ -1,6 +1,8 @@
 <h2 class="c-project-heading--task">Challenge</h2>
-### Step 1
+
 Extend your game by changing words and map rules to create your own themed adventure.
+
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
 
 <div class="c-project-code">
 --- code ---
@@ -37,7 +39,8 @@ object_nouns = [
 --- /code ---
 </div>
 
-### Step 2
-**Test:** Click **Run**.
+## Now run your code
+
+Click **Run**.
 
 You can describe how your new theme changed room and object names in the output.

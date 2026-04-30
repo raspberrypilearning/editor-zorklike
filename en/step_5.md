@@ -1,6 +1,8 @@
 <h2 class="c-project-heading--task">Add Items To Collect</h2>
-### Step 1
+
 Add two random items to the map and update the scripted moves to collect them.
+
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
 
 <div class="c-project-code">
 --- code ---
@@ -39,7 +41,8 @@ scripted_moves = [
 --- /code ---
 </div>
 
-### Step 2
-**Test:** Click **Run**.
+## Now run your code
+
+Click **Run**.
 
 The output shows both `get` commands and both items being added to the inventory.

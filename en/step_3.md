@@ -1,6 +1,8 @@
 <h2 class="c-project-heading--task">Generate Random Room And Object Names</h2>
-### Step 1
+
 Replace the fixed names with generated room names and generated object names.
+
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
 
 <div class="c-project-code">
 --- code ---
@@ -29,7 +31,8 @@ monster_name = object_names[2]  # Random monster name.
 --- /code ---
 </div>
 
-### Step 2
-**Test:** Click **Run** two times.
+## Now run your code
+
+Click **Run** two times.
 
 The room and object names are different on each run.
